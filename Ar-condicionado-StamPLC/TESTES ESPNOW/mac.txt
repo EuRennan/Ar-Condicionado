@@ -1,0 +1,17 @@
+STICK LITE V3
+Wi-Fi parameters:
+02:11:10.971 ->   Mode: STA
+02:11:10.971 ->   MAC Address: 48:CA:43:3D:E3:70
+02:11:10.971 ->   Channel: 6
+0x48, 0xCA, 0x43, 0x3D, 0xE3, 0x70
+----------------------------------------------------------
+heltec wifi lora v3
+ Wi-Fi parameters:
+02:37:29.595 ->   Mode: STA
+02:37:29.595 ->   MAC Address: 48:CA:43:3E:5E:D8
+02:37:29.595 ->   Channel: 6
+0x48, 0xCA, 0x43, 0x3E, 0x5E, 0xD8
+------------------------------------------------------
+STAMPLC 
+03:10:32.482 -> MAC Address do ESP32: B0:81:84:96:78:A4
+0xB0, 0x81, 0x84, 0x96, 0x78, 0xA4
