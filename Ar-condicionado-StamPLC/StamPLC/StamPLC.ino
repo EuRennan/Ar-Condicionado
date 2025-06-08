@@ -38,64 +38,6 @@ void loop()
   }
 }
 
-
-/*bool comandoBomba()
-{
-  // Leitura dos botões locais
-  bool estadoBomba = M5StamPLC.readPlcInput(BOMBA);
-  bool estadoDesligaBomba = M5StamPLC.readPlcInput(DESLIGA_BOMBA);
-
-  // Se os botões estão em conflito, prioriza o que estiver pressionado
-  if (estadoBomba != estadoDesligaBomba)
-  {
-    ultimoComandoBomba = estadoBomba;  // true se botão de ligar estiver ativo, false se botão de desligar estiver ativo
-  }
-  else
-  {
-    // Nenhum botão está pressionado ou ambos estão no mesmo estado
-    // Verifica se houve mudança no comando remoto
-    if (cmdBombaRemotoAnterior != comandoBombaRemoto)
-    {
-      cmdBombaRemotoAnterior = comandoBombaRemoto;
-      ultimoComandoBomba = comandoBombaRemoto;
-    }
-    // Se não houve mudança, mantém o valor anterior de ultimoComandoBomba
-  }
-
-  return ultimoComandoBomba;
-}*/
-
-
-
-/*
-bool comandoBomba()
-{
-  if (M5StamPLC.readPlcInput(BOMBA) != M5StamPLC.readPlcInput(DESLIGA_BOMBA))
-  {
-    if(M5StamPLC.readPlcInput(BOMBA))
-    {
-      ultimoComandoBomba = true;
-    } else
-      {
-        ultimoComandoBomba = false;
-      }
-    delay(50);
-  } else if (cmdBombaRemotoAnterior != comandoBombaRemoto)
-    {
-      if(comandoBombaRemoto)
-      {
-        cmdBombaRemotoAnterior = comandoBombaRemoto;
-        ultimoComandoBomba = true;
-      } else
-        {
-          cmdBombaRemotoAnterior = comandoBombaRemoto;
-          ultimoComandoBomba = false;
-        }
-      delay(50);
-    }
-  return ultimoComandoBomba;
-}*/
-
 bool comandoFan()
 {
   bool botaoLigaFan = M5StamPLC.readPlcInput(FAN);
