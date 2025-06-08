@@ -9,7 +9,7 @@ byte ciclo = 0;
 
 /* CONFIGURAÇÃO INICIAL LORA */
 #define RF_FREQUENCY               915E6  // Frequência LoRa em Hz
-#define TX_OUTPUT_POWER            5     // Potência de transmissão em dBm
+#define TX_OUTPUT_POWER            3     // Potência de transmissão em dBm
 #define LORA_BANDWIDTH             0      // Largura de banda (0: 125 kHz)
 #define LORA_SPREADING_FACTOR      12     // Fator de espalhamento (SF7-SF12)
 #define LORA_CODINGRATE            2      // Taxa de codificação (4/5)
