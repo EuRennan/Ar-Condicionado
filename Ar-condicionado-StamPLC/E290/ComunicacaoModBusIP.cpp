@@ -28,7 +28,7 @@ void SetupComunicacaoModBusIP()
 
     mb.server();
 
-    // Adicionar um registro Modbus (holding register) para armazenar o estado do led
+    // Adicionar um registro Modbus (holding register) para armazenar o estado dos dispositivos
     mb.addIsts(REGISTRO_DA_BOMBA);
     mb.addIsts(REGISTRO_DA_FAN);
     mb.addIreg(REGISTRO_DE_INSUFLAMENTO);
@@ -48,9 +48,7 @@ void EnvioDosRegistros()
     }
 
   unsigned int tempoAtual = millis();
-  
-  
-  
+   
   /*  Armazena os estados no registro Modbus  */
   mb.Ists(REGISTRO_DA_BOMBA,        statusBombaRecebido );
   mb.Ists(REGISTRO_DA_FAN,          statusFanRecebido   );
@@ -65,15 +63,11 @@ void EnvioDosRegistros()
   comandoBombaRemoto = mb.Coil(COMANDO_BOMBA_REMOTO);
   comandoFanRemoto   = mb.Coil(COMANDO_FAN_REMOTO  );
 
-  
   if(tempoAtual - tempoAnterior2 > 1000)
   {
     Serial.println("COIL ESTADO DA BOMBA: " + String(mb.Ists(REGISTRO_DA_BOMBA)) + " Comando Remoto " + String(comandoBombaRemoto));
     tempoAnterior2 = tempoAtual;
   }
-  
-  
-
   /*FIM-- Armazena os estados no registro Modbus --FIM*/ 
 }
 
