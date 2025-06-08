@@ -4,8 +4,8 @@
 #include "time.h"
 
 /*  CONFIGURAÇÃO DO WIFI  */
-const char* ssid = "Katia";
-const char* password = "14122008@Rm";
+const char* ssid = "SEU_SSID";
+const char* password = "SUA_SENHA";
 ModbusIP mb;
 /*FIM-- CONFIGURAÇÃO DO WIFI --FIM*/
 
